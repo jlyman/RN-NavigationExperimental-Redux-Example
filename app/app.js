@@ -1,13 +1,10 @@
-import React, { Component } from 'react-native'
-import { createStore, applyMiddleware } from 'redux'
+import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import thunk from 'redux-thunk'
-
-import reducers from './reducers'
 import AppContainer from './containers/AppContainer'
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore)
-const store = createStoreWithMiddleware(reducers)
+import configureStore from './store'
+const initialState = {}
+const store = configureStore(initialState)
 
 export default class App extends Component {
 	render() {
