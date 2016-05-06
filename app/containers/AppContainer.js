@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavigationExperimental, View, StyleSheet, PropTypes } from 'react-native'
+import React, { PropTypes } from 'react'
+import { NavigationExperimental, View, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
 
 import First from './First'
