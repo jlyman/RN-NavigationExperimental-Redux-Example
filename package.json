@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "eslint": "^2.9.0",
-    "eslint-plugin-react": "^5.0.1"
+    "eslint-plugin-react": "^5.0.1",
+    "remote-redux-devtools": "^0.3.2"
   }
 }
