@@ -1,4 +1,5 @@
-import React, { TouchableOpacity, Text, StyleSheet, PropTypes } from 'react-native'
+import React from 'react'
+import { TouchableOpacity, Text, StyleSheet, PropTypes } from 'react-native'
 
 const NavButton = (props) => {
 	return (

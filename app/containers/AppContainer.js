@@ -1,6 +1,5 @@
-'use strict'
-
-import React, { NavigationExperimental, View, StyleSheet, PropTypes } from 'react-native'
+import React from 'react'
+import { NavigationExperimental, View, StyleSheet, PropTypes } from 'react-native'
 import { connect } from 'react-redux'
 
 import First from './First'
@@ -23,7 +22,7 @@ class AppContainer extends React.Component {
 		return (
 
 			// Note that we are not using a NavigationRootContainer here because Redux is handling
-			// the reduction of our state for us. Instead, we grab the navigationState we have in 
+			// the reduction of our state for us. Instead, we grab the navigationState we have in
 			// our Redux store and pass it directly to the <NavigationAnimatedView />.
 			<NavigationAnimatedView
 				navigationState={navigationState}
@@ -53,7 +52,7 @@ class AppContainer extends React.Component {
 
 	_renderScene({scene}) {
 		const { navigationState } = scene
-		
+
 		switch(navigationState.key) {
 		case 'First':
 			return <First />

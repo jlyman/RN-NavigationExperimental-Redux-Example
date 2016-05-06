@@ -1,4 +1,5 @@
-import React, { View, Text, PropTypes, StyleSheet } from 'react-native'
+import React from 'react'
+import { View, Text, PropTypes, StyleSheet } from 'react-native'
 
 import NavButton from './NavButton'
 
