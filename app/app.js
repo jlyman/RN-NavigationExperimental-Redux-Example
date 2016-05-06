@@ -3,7 +3,8 @@ import { Provider } from 'react-redux'
 import AppContainer from './containers/AppContainer'
 
 import configureStore from './store'
-const store = configureStore()
+const initialState = {}
+const store = configureStore(initialState)
 
 export default class App extends Component {
 	render() {

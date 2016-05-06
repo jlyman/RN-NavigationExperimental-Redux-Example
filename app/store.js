@@ -7,8 +7,8 @@ function configureStore(initialState = {}) {
   const createStoreWithMiddleware = compose(
     devTools(),
     applyMiddleware(thunk)
-  )(createStore);
-  return createStoreWithMiddleware(reducers, initialState);
+  )(createStore)
+  return createStoreWithMiddleware(reducers, initialState)
 }
 
-module.exports = configureStore;
+module.exports = configureStore
