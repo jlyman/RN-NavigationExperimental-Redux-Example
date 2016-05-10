@@ -1,4 +1,12 @@
-import React, { TouchableOpacity, Text, StyleSheet, PropTypes } from 'react-native'
+import React, {
+	PropTypes
+} from 'react';
+
+import {
+	TouchableOpacity,
+	Text,
+	StyleSheet
+} from 'react-native';
 
 const NavButton = (props) => {
 	return (
@@ -6,12 +14,12 @@ const NavButton = (props) => {
 			<Text style={styles.label}>Go to {props.destLabel} Page</Text>
 		</TouchableOpacity>
 	)
-}
+};
 
 NavButton.propTypes = {
 	destLabel: PropTypes.string.isRequired,
 	buttonHandler: PropTypes.func.isRequired
-}
+};
 
 const styles = StyleSheet.create({
 	button: {
@@ -23,6 +31,6 @@ const styles = StyleSheet.create({
 		color: '#F4F4E9',
 		textAlign: 'center'
 	}
-})
+});
 
-export default NavButton
+export default NavButton;

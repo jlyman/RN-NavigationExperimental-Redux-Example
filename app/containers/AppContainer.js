@@ -1,25 +1,34 @@
 'use strict'
 
-import React, { NavigationExperimental, View, StyleSheet, PropTypes } from 'react-native'
-import { connect } from 'react-redux'
+import React, {
+	Component,
+	PropTypes
+} from 'react';
 
-import First from './First'
-import Second from './Second'
-import Third from './Third'
-import { navigatePush, navigatePop } from '../actions'
+import {
+	NavigationExperimental,
+	View,
+	StyleSheet
+} from 'react-native';
 
 const {
 	AnimatedView: NavigationAnimatedView,
 	Card: NavigationCard,
 	Header: NavigationHeader
-} = NavigationExperimental
+} = NavigationExperimental;
 
+import { connect } from 'react-redux';
 
-class AppContainer extends React.Component {
+import First from './First';
+import Second from './Second';
+import Third from './Third';
+import { navigatePush, navigatePop } from '../actions';
+
+class AppContainer extends Component {
 	render() {
 		return (
 			// Note that we are not using a NavigationRootContainer here because Redux is handling
-			// the reduction of our state for us. Instead, we grab the navigationState we have in 
+			// the reduction of our state for us. Instead, we grab the navigationState we have in
 			// our Redux store and pass it directly to the <NavigationAnimatedView />.
 			<NavigationAnimatedView
 				navigationState={this.props.navigationState}
@@ -36,7 +45,7 @@ class AppContainer extends React.Component {
 				)}
 				renderScene={props => (
 					// Again, we pass our navigationState from the Redux store to <NavigationCard />.
-					// Finally, we'll render out our scene based on navigationState in _renderScene().
+					// Finally, we will render out our scene based on navigationState in _renderScene().
 					<NavigationCard
 						{...props}
 						key={props.scene.navigationState.key}
@@ -49,7 +58,7 @@ class AppContainer extends React.Component {
 
 	_renderScene({scene}) {
 		const { navigationState } = scene
-		
+
 		switch(navigationState.key) {
 		case 'First':
 			return <First />
@@ -64,7 +73,7 @@ class AppContainer extends React.Component {
 AppContainer.propTypes = {
 	navigationState: PropTypes.object,
 	onNavigate: PropTypes.func.isRequired
-}
+};
 
 const styles = StyleSheet.create({
 	outerContainer: {
@@ -73,15 +82,15 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1
 	}
-})
+});
 
 export default connect(
 	state => ({
 		navigationState: state.navigationState
 	}),
 	dispatch => ({
-		onNavigate: (action) => { 
-			if (action.type === 'back' || action.type === 'BackAction') { dispatch(navigatePop()) } 
+		onNavigate: (action) => {
+			if (action.type === 'back' || action.type === 'BackAction') { dispatch(navigatePop()) }
 		}
 	})
-)(AppContainer)
+)(AppContainer);

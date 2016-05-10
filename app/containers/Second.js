@@ -1,13 +1,12 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import SecondScreen from '../components/SecondScreen'
-import { navigatePush } from '../actions'
-
+import SecondScreen from '../components/SecondScreen';
+import { navigatePush } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
 	}
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -15,9 +14,9 @@ const mapDispatchToProps = (dispatch) => {
 			dispatch(navigatePush('Third'))
 		}
 	}
-}
+};
 
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(SecondScreen)
+)(SecondScreen);

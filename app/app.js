@@ -1,15 +1,18 @@
-import React, { Component } from 'react-native'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import thunk from 'redux-thunk'
+import React, {
+	Component
+} from 'react';
 
-import reducers from './reducers'
-import AppContainer from './containers/AppContainer'
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore)
-const store = createStoreWithMiddleware(reducers)
+import reducers from './reducers';
+import AppContainer from './containers/AppContainer';
 
-export default class App extends Component {
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const store = createStoreWithMiddleware(reducers);
+
+class App extends Component {
 	render() {
 		return (
 			<Provider store={store}>
@@ -18,3 +21,5 @@ export default class App extends Component {
 		)
 	}
 }
+
+export default App;

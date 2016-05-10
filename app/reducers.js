@@ -1,12 +1,10 @@
-import { combineReducers } from 'redux'
-import React from 'react-native'
+import { NavigationExperimental } from 'react-native';
 
 const {
-	NavigationExperimental
-} = React
-const {
 	Reducer: NavigationReducer
-} = NavigationExperimental
+} = NavigationExperimental;
+
+import { combineReducers } from 'redux';
 
 const initialNavState = {
 	key: 'MainNavigation',
@@ -14,7 +12,7 @@ const initialNavState = {
 	children: [
 		{ key: 'First' }
 	]
-}
+};
 
 const navigationState = NavigationReducer.StackReducer({
 	initialState: initialNavState,
@@ -22,14 +20,13 @@ const navigationState = NavigationReducer.StackReducer({
 		if (action.type === 'push') {
 			return (_, action) => action.state
 		}
-		
+
 		return null
 	}
-})
-
+});
 
 const appReducers = combineReducers({
 	navigationState
-})
+});
 
-export default appReducers
+export default appReducers;

@@ -1,13 +1,12 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import ThirdScreen from '../components/ThirdScreen'
-import { navigatePop } from '../actions'
-
+import ThirdScreen from '../components/ThirdScreen';
+import { navigatePop } from '../actions';
 
 const mapStateToProps = (state) => {
 	return {
 	}
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -16,9 +15,9 @@ const mapDispatchToProps = (dispatch) => {
 			dispatch(navigatePop())
 		}
 	}
-}
+};
 
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(ThirdScreen)
+)(ThirdScreen);

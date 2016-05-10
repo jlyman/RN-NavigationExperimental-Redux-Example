@@ -1,6 +1,6 @@
 // *** Action Types ***
-export const NAV_PUSH = 'push'
-export const NAV_POP = 'back'
+export const NAV_PUSH = 'push';
+export const NAV_POP = 'back';
 
 
 // *** Action Creators ***
@@ -11,10 +11,10 @@ export function navigatePush(state) {
 		type: NAV_PUSH,
 		state
 	}
-}
+};
 
 export function navigatePop() {
 	return {
 		type: NAV_POP
 	}
-}
+};

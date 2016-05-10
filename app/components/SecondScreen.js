@@ -1,6 +1,14 @@
-import React, { View, Text, PropTypes, StyleSheet } from 'react-native'
+import React, {
+	PropTypes
+} from 'react';
 
-import NavButton from './NavButton'
+import {
+	View,
+	Text,
+	StyleSheet
+} from 'react-native';
+
+import NavButton from './NavButton';
 
 const SecondScreen = (props) => {
 	return (
@@ -10,11 +18,11 @@ const SecondScreen = (props) => {
 			<NavButton destLabel="Third" buttonHandler={props.onButtonPress} />
 		</View>
 	)
-}
+};
 
 SecondScreen.propTypes = {
 	onButtonPress: PropTypes.func.isRequired
-}
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -29,6 +37,6 @@ const styles = StyleSheet.create({
 		color: '#ffffff',
 		marginBottom: 30
 	}
-})
+});
 
-export default SecondScreen
+export default SecondScreen;
