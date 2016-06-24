@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "react": "^15.0.2",
-    "react-native": "facebook/react-native#master",
+    "react-native": "~0.27.2",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",
     "redux-thunk": "^2.0.1"
