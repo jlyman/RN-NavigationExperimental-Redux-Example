@@ -4,6 +4,8 @@ A small demonstration app showing how to use Redux to manage navigation state in
 
 ![Screencast of flipping through a few different screes](rn-ne-redux-demo.gif?raw=true "Screencast of functionality")
 
+*Known Bug:* The current version of NavigationExperimental used in 0.28 does not allow for screen resets, so the "pop to home" button is broken. Working on getting it fixed in v0.30+.
+
 The key elements to note when trying to implement NavigationExperimental with Redux include the following:
 
 * You don't need a `<NavigationRootContainer />`, which otherwise runs the navigation reducers, because Redux will do that for us. We lose the constant `onNavigate()` method in React's context, but that's okay because we just make more specific dispatches to navigation methods where they are needed, connected via Redux.
